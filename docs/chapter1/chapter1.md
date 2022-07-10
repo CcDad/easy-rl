@@ -529,7 +529,7 @@ env.step()完成了一个完整的 $S \to A \to R \to S'$ 过程。我们只要�
 我们想要查看当前 Gym 库已经注册了哪些环境，可以使用以下代码：
 ```python
 from gym import envs
-env_specs = envs.registry.all()
+env_specs = envs.registry.values()
 envs_ids = [env_spec.id for env_spec in env_specs]
 print(envs_ids)
 ```
