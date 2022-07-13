@@ -619,7 +619,7 @@ train是 bool 型的变量，指示在运行过程中是否训练智能体，在
 接下来，我们使用下面的代码让智能体和环境交互一个回合，并在交互过程中进行图形化显示，可用 env.close()语句关闭图形界面。
 
 ```python
-env.seed(0) # 设置随机数种子,只是为了让结果可以精确复现,一般情况下可删去
+env.reset(seed=0)  # 设置随机数种子,只是为了让结果可以精确复现,一般情况下可删去
 episode_reward = play_montecarlo(env, agent, render=True)
 print('回合奖励 = {}'.format(episode_reward))
 env.close() # 此语句可关闭图形界面
